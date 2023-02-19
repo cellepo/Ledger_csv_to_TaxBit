@@ -4,12 +4,8 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
-/**
- * Unit test for simple App.
- */
-public class Ledger_csv_to_TaxBitTest
-    extends TestCase
-{
+public class Ledger_csv_to_TaxBitTest extends TestCase {
+
     /**
      * Create the test case
      *
@@ -28,11 +24,4 @@ public class Ledger_csv_to_TaxBitTest
         return new TestSuite( Ledger_csv_to_TaxBitTest.class );
     }
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
 }
