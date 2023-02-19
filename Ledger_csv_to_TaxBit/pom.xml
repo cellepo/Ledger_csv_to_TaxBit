@@ -16,6 +16,25 @@
     <maven.compiler.target>16</maven.compiler.target>
   </properties>
 
+  <build>
+    <plugins>
+      <!-- see: https://maven.apache.org/plugins/maven-assembly-plugin/usage.html -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.3.0</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <mainClass>com.cellepo.Ledger_csv_to_TaxBit</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
