@@ -32,6 +32,20 @@
           </archive>
         </configuration>
       </plugin>
+      <!-- see: https://maven.apache.org/plugins/maven-assembly-plugin/usage.html -->
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>com.cellepo.Ledger_csv_to_TaxBit</mainClass>
+            </manifest>
+          </archive>
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 
