@@ -11,14 +11,14 @@ import java.io.IOException;
 public class Ledger_csv_to_TaxBit {
 
     static final String IN_CSV_FILENAME = "in.csv";
-    static final String OUT_CSV_FILENAME = "out.csv";
     static final String[] OUT_HEADER_NAMES = {"outA", "outB"};
 
     public static void main(String[] args) {
+        String outFilename = args[0];
         // without a try-with-resources (which automatically closes), must printer.close()
         try(
             CSVPrinter csvPrinter = new CSVPrinter(
-                new FileWriter(OUT_CSV_FILENAME),
+                new FileWriter(outFilename),
                 CSVFormat.Builder.create().setHeader(OUT_HEADER_NAMES).build()
             )
         ){
